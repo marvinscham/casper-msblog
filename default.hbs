@@ -17,6 +17,31 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
+    <style>
+    p {
+        text-align: justify;   
+    }
+    .reading-progress {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        height: 5px; /* Progress bar height */
+        background: var(--ghost-accent-color); /* Progress bar background color */
+        -webkit-appearance: none;
+            -moz-appearance: none;
+                appearance: none; /* Hide default progress bar */
+    }
+
+    .reading-progress::-webkit-progress-bar {
+        background-color: transparent;
+    }
+
+    .reading-progress::-webkit-progress-value {
+        background: #c40233; /* Progress bar color */
+    }
+    </style>
+
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
     {{ghost_head}}
